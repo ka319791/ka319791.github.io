@@ -1,5 +1,4 @@
 # ka319791.github.io
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -292,5 +291,3 @@
             window.addEventListener('resize', updateSlider);
         });
     </script>
-</body>
-</html>
