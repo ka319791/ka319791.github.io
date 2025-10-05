@@ -1,293 +1,287 @@
-# ka319791.github.io
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
+    <title>Есенин | Журнал о поэте</title>
     <style>
-        body {
-            background: linear-gradient(120deg,purple, magenta, cyan);
+        * {
             margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
         }
-        
+
+        body {
+            background: #fefaf0;
+            color: #333;
+            line-height: 1.6;
+        }
+
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        #he {
-            background: linear-gradient(90deg, #3498db, #2c3e50);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .slider {
-            background-color: beige;
-            border-radius: 30px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .slider-container {
-            position: relative;
-            margin: 30px auto;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        .slider-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 365%;
-        }
-        
-        .card {
-            flex: 0 0 25%;
-            padding: 15px;
-            min-height: 300px;
-        }
-        
-        .inner {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .inner:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card1 .inner {
-            border-top: 5px solid #3498db;
-        }
-        
-        .card2 .inner {
-            border-top: 5px solid #3498db;
-        }
-        
-        .card3 .inner {
-            border-top: 5px solid #3498db;
-        }
-        
-        .card4 .inner {
-            border-top: 5px solid #3498db;
-        }
-        
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin-top: 70px;
-        }
-        
-        .arrow {
-            background: #3498db;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            cursor: pointer;
-            margin: 0 15px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            user-select: none;
-        }
-        
-        .arrow:hover {
-            background: #2980b9;
-            transform: scale(1.1);
-        }
-        
-        .dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: #bdc3c7;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        
-        .dot.active {
-            background: #3498db;
-            transform: scale(1.2);
-        }
-        
-        .card-counter {
-            text-align: center;
-            margin-top: 15px;
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-        
-        .photo-container {
-            display: flex;
-            background-color: beige;
-            border-radius: 30px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        img {
             max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 10px 0;
+            padding: 0 15px;
         }
-        
-        @media (max-width: 768px) {
-            .card {
-                flex: 0 0 100%; 
+
+        /* Шапка */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 5px solid #e74c3c;
+        }
+
+        .header-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .header-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Навигация */
+        nav {
+            background: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 1rem 1.2rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: #3d566e;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        /* Основной контент */
+        .magazine-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .magazine-layout {
+                grid-template-columns: 2fr 1fr;
             }
-            
-            .slider-wrapper {
-                width: 400%; 
-            }
+        }
+
+        /* Карточки статей */
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .article-content p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #c0392b;
+        }
+
+        /* Боковая панель */
+        .sidebar-widget {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-widget h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .poem-excerpt {
+            font-style: italic;
+            color: #666;
+            line-height: 1.8;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-left: 3px solid #e74c3c;
+        }
+
+        .facts-list {
+            list-style: none;
+        }
+
+        .facts-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        /* Подвал */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-content">
+            <h1>СЕРГЕЙ ЕСЕНИН</h1>
+            <p>Журнал о жизни и творчестве великого поэта</p>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#biography" class="nav-item">Биография</a>
+            <a href="#poetry" class="nav-item">Поэзия</a>
+            <a href="#gallery" class="nav-item">Галерея</a>
+            <a href="#facts" class="nav-item">Факты</a>
+            <a href="#legacy" class="nav-item">Наследие</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
     <div class="container">
-        <header id="he">
-            <h1>Я - Абдурахимов Кирилл</h1>
-            <h2>Предоставляю свою личную<font size="-1">(или не очень)</font> информацию</h2>
-        </header>
-        
-        <div class="slider">
-            <div class="slider-container">
-                <div class="slider-wrapper" id="sliderWrapper">
-                    <div class="card card1">
-                        <div class="inner">
-                            <h3>Откуда я:</h3>
-                            <ul>
-                                <li>Я живу в этом городе</li>
-                                <li>Я пришел из 2-ой школы и поступил в данное учебное заведение</li>
-                            </ul>
-                        </div>
+        <div class="magazine-layout">
+            <!-- Основные статьи -->
+            <main class="main-content">
+                <article id="biography" class="article-card">
+                    <img src="https://cdn.culture.ru/images/7b4c9b8d-5f14-5e7b-9e89-9f89d889a7b9" alt="Есенин молодой" class="article-image">
+                    <div class="article-content">
+                        <h2>Жизнь и судьба поэта</h2>
+                        <p>Сергей Александрович Есенин родился 3 октября 1895 года в селе Константиново Рязанской губернии. Судьба крестьянского мальчика, ставшего самым известным поэтом России, полна загадок и противоречий.</p>
+                        <p>От первых стихов, пронизанных любовью к родной природе, до трагических мотивов поздней лирики — творческий путь Есенина отражает сложную эпоху начала XX века.</p>
+                        <a href="#" class="read-more">Читать полностью</a>
                     </div>
-                    
-                    <div class="card card2">
-                        <div class="inner">
-                            <h3>Мои увлечения:</h3>
-                            <ul>
-                                <li>Химия</li>
-                                <li>Математика</li>
-                                <li>Программирование</li>
-                            </ul>
-                            <p>Естественно, эти знания на базовом уровне, ведь я слишком ленивый</p>
-                        </div>
+                </article>
+
+                <article id="poetry" class="article-card">
+                    <img src="https://cdn.culture.ru/images/8b8d8a7e-3c3f-5a4e-9e9c-9f89d889a7b9" alt="Рукопись Есенина" class="article-image">
+                    <div class="article-content">
+                        <h2>Поэтический стиль Есенина</h2>
+                        <p>«Не жалею, не зову, не плачу...», «Отговорила роща золотая...», «Письмо к женщине» — эти стихотворения знает наизусть вся Россия. В чем секрет магии есенинской поэзии?</p>
+                        <p>Яркие метафоры, народная образность, особая мелодичность и пронзительная искренность сделали его стихи вечными.</p>
+                        <a href="#" class="read-more">Анализ творчества</a>
                     </div>
-                    
-                    <div class="card card3">
-                        <div class="inner">
-                            <h3>Чем бы я хотел заниматься, если бы не моя рассеянность:</h3>
-                            <ul>
-                                <li>Музыка, а точнее игра пианино/синтезаторе</li>
-                                <li>Рисование<font size="-1">(срисовывание по памяти)</font>. Я до этого рисовал всякий бессмысленный бред в стиле пиксель арт, но потом я понял, что этот навык не поможет хоть как-то в моей жизни</li>
-                                <li>Английский язык. А я ведь ходил на кружок по нему где мы проходили материал 10-11 классов, но я все забыл</li>
-                            </ul>
-                        </div>
+                </article>
+
+                <article id="gallery" class="article-card">
+                    <img src="https://cdn.culture.ru/images/9c9e9f8a-2d2e-5b5f-8d8c-9f89d889a7b9" alt="Есенин в кругу друзей" class="article-image">
+                    <div class="article-content">
+                        <h2>Есенин и его эпоха</h2>
+                        <p>Поэт в кругу современников: Марина Цветаева, Анна Ахматова, Владимир Маяковский. Сложные отношения с советской властью и вечная связь с Россией.</p>
+                        <p>Фотографии, письма, воспоминания друзей и врагов — портрет поэта в интерьере революционной эпохи.</p>
+                        <a href="#" class="read-more">Смотреть галерею</a>
+                    </div>
+                </article>
+            </main>
+
+            <!-- Боковая панель -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Избранное стихотворение</h3>
+                    <div class="poem-excerpt">
+                        «Не жалею, не зову, не плачу,<br>
+                        Все пройдет, как с белых яблонь дым.<br>
+                        Увяданья золотом охваченный,<br>
+                        Я не буду больше молодым...»
                     </div>
                 </div>
-                
-                <div class="navigation">
-                    <div class="arrow" id="prev">←</div>
-                    <div class="arrow" id="next">→</div>
+
+                <div id="facts" class="sidebar-widget">
+                    <h3>Малоизвестные факты</h3>
+                    <ul class="facts-list">
+                        <li>Первый сборник стихов «Радуница» вышел в 1916 году</li>
+                        <li>Есенин был женат на Айседоре Дункан</li>
+                        <li>Поэт много путешествовал по Европе и США</li>
+                        <li>Обстоятельства его смерти до сих пор вызывают споры</li>
+                        <li>В честь Есенина названы улицы по всей России</li>
+                    </ul>
                 </div>
-                
-                <div class="dots">
-                    <div class="dot active" data-index="0"></div>
-                    <div class="dot" data-index="1"></div>
-                    <div class="dot" data-index="2"></div>
+
+                <div id="legacy" class="sidebar-widget">
+                    <h3>Наследие поэта</h3>
+                    <p>Стихи Есенина переведены на десятки языков, его творчество изучают в школах и вузах по всему миру. Музеи поэта работают в Москве, Санкт-Петербурге и его родном Константиново.</p>
                 </div>
-                
-                <div class="card-counter">
-                    Карточка <span id="current">1</span> из <span id="total">4</span>
-                </div>
-            </div>
+            </aside>
         </div>
-        
-        <div class="photo-container">
-            <div class="more">
-                <img src="mo.png">
-                <p>Это я на Черном море</p>
-            </div>
-            <div class="ate">
-                <img src="at.png">
-                <p>Это мой аттестат</p>
-            </div>
-            <div class="gori">
-                <img src="go.png">
-                <p>Это я на красной поляне</p>
-            </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-content">
+            <p>Журнал о Сергее Есенине</p>
+            <p>Прикоснитесь к миру великого поэта</p>
         </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sliderWrapper = document.getElementById('sliderWrapper');
-            const prevBtn = document.getElementById('prev');
-            const nextBtn = document.getElementById('next');
-            const dots = document.querySelectorAll('.dot');
-            const currentElement = document.getElementById('current');
-            const totalElement = document.getElementById('total');
-            let currentIndex = 0;
-            const totalSlides = 3;
-            totalElement.textContent = totalSlides;
-            function updateSlider() {
-                const offset = window.innerWidth <= 768 ? -currentIndex * 100 : -currentIndex * 25;
-                sliderWrapper.style.transform = `translateX(${offset}%)`;
-                dots.forEach((dot, index) => {
-                    if (index === currentIndex) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
-                currentElement.textContent = currentIndex + 1;
-            }
-            nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateSlider();
-            });
-            
-            prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                updateSlider();
-            });
-            dots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    currentIndex = parseInt(this.getAttribute('data-index'));
-                    updateSlider();
-                });
-            });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowRight') {
-                    nextBtn.click();
-                } else if (e.key === 'ArrowLeft') {
-                    prevBtn.click();
-                }
-            });
-            window.addEventListener('resize', updateSlider);
-        });
-    </script>
+    </footer>
+</body>
+</html>
