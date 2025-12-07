@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0%;
+    background-color: black;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header, footer {
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+header {
+    background: linear-gradient(to bottom, #2763db, #132f7d);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+.main, .pic {
+    width: 75vw; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.main {
+    background: linear-gradient(to bottom, #0249c3, #132f7d);
+    border: solid #132f7d 3px;
+    padding: 20px !important;
+    box-shadow: 
+        -20px 0 25px -10px rgba(0, 94, 255, 0.5),
+        20px 0 25px -10px rgba(0, 94, 255, 0.5);
+    animation: shadow 2s ease-in-out infinite;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow:  
+        -20px 0 25px -10px rgba(0, 94, 255, 0.5),
+        20px 0 25px -10px rgba(0, 94, 255, 0.5);
+    }
+    50% {
+        box-shadow:  
+        -40px 0 25px -10px rgba(240, 247, 192, 0.5),
+        40px 0 25px -10px rgba(240, 247, 192, 0.5);
+    }
+    100% {
+        box-shadow:  
+        -20px 0 25px -10px rgba(0, 94, 255, 0.5),
+        20px 0 25px -10px rgba(0, 94, 255, 0.5);
+    }
+
+}
+
+.pic {
+    background-color: black;
+}
+
+footer {
+    padding: 30px;
+    background-color: black;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: solid #132f7d 10px;
+}
+
+h1 {
+    background: linear-gradient(to top, yellow 65%, rgb(240, 247, 192) 15%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+p {
+    color: white;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: square;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.5)
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
