@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/scene/great.css">
+        <title>Cutscene</title>
+    </head>
+    <body>
+        <section class="screen" id="scene">
+            <button onclick="start()" style="padding: 20px 40px; font-size: 24px;" id="st">Начать катсцену</button>
+            <div class="slide" id="fir">
+                <img src="assets/scene/cool.png" alt="pic" class="i1">
+                <img src="assets/scene/cool.png" alt="pic" id="sp">
+                <h1 class="typewr">Здесь мог быть Ваш текст</h1>
+                <img src="#" alt="pic" class="i2">
+                <h1 class="typewr2">Да, реально Ваш</h1>
+            </div>
+            
+            <div class="slide" id="sec">
+                <img src="assets/scene/cool.png" alt="pic" class="i1">
+                <h1 class="typewr">И здесь тоже</h1>
+                <img src="assets/scene/cool.png" alt="pic" class="i2">
+                <h1 class="typewr2">Но времени у меня наверно нехватило чтобы это сдлать...</h1>
+            </div>
+
+            <div class="slide" id="thi">
+                <img src="assets/scene/cool.png" alt="pic" class="i1">
+                <h1 class="typewr">Крутая картинка сверху, не так ли?</h1>
+                <img src="assets/scene/cool.png" alt="pic" class="i2">
+                <h1 class="typewr2">Он ваше крутой скелет реально.</h1>
+            </div>
+
+            <div class="slide" id="fou">
+                <img src="assets/scene/cool.png" alt="pic" class="i1">
+                <h1 class="typewr">Бла бла</h1>
+                <img src="assets/scene/cool.png" alt="pic" class="i2">
+                <h1 class="typewr2">Сколько ещё жже этих слайдов Power point осталось!?!!</h1>
+            </div>
+
+            <div class="slide" id="fif">
+                <img src="assets/scene/goku.png" alt="pic" class="i1">
+                <h1 class="typewr">Всё, конец презентации.</h1>
+                <img src="assets/scene/goku.png" alt="pic" class="i2">
+                <h1 class="typewr2">Точно-точно.</h1>
+            </div>
+            <div id="fuckingSquare"></div>
+        </section>
+
+        <section class="screen" id="menu">
+            <header id="head">
+                <h1 id="headtit">VS something</h1>
+            </header>
+
+            <div class="dif">
+                <h1 id="easy">ЛЕГКО (ни на что не влияет эта сложжность)</h1>
+                <h1 id="normal">НОРМАЛЬНО</h1>
+                <h1 id="hard">СЛОЖНО</h1>
+            </div>
+
+            <div>
+                <img src="assets/menu/soul.png" alt="pic" id="select">
+                <div id="glow"></div>
+            </div>
+        </section>
+
+        <section id="battle">
+
+            <div class="enemy-box">
+                <div id="costiil">
+
+                    <div class="enemy-sprite">
+                        <img src="assets/battle/img/papys.png" alt="papys">
+                        <div class="text-dmg" id="dmgt"></div>
+                    </div>
+                    <div class="enemy-text"><p></p></div>
+
+                </div>
+            </div>
+
+            <div class="Textbox-Turn" id="war">
+                <div class="box" id="warbox">
+                    <div class="HeartShaped"></div>
+                </div>
+            </div>
+
+            <div id="static">
+                <div class="TextBox-Turn" id="peace">
+                    <div class="box">
+
+                        <div id="textbox"><p>* Light is strucking you...</p></div>
+
+                        <div id="Fight-bar">
+                            <div id="scroll-thing"></div>
+                        </div>
+
+                        <div id="Act-Options">
+                            <div class="row">
+                                <div class="text" id="checks">* Check</div>
+                                <div class="text" id="kys">* Humiliate</div>
+                            </div>
+
+                            <div class="row">    
+                                <div class="text" id="temu">* Tell the worst pun ever</div>
+                                <div class="text" id="insult">* Insult</div>
+                            </div>
+                        </div>
+
+                        <div id="Items">
+                            <div class="row">
+                                <div class="text" id="steak">* Steak</div>
+                                <div class="text" id="lh0">* L. Hero</div>
+                            </div>
+                            <div class="row">
+                                <div class="text" id="lh1">* L. Hero</div>
+                                <div class="text" id="lh2">* L. Hero</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stats-row">
+
+                        <div class="health"><p><div class="text-health">CHARA LV 19</div></p></div>
+                        <div class="health" id="health-dynamic">
+                            <div class="text-health">HP</div>
+                            <div class="health-bar">
+                                <div class="health-bar" id="bar"></div>
+                            </div>
+                            <div class="text-health" id="changeAble">92/92</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div class="button-row">
+
+                        <div class="button" id="fight"><img src="assets/battle/img/fight.png" id="fightb"></div>
+                        <div class="button" id="act"><img src="assets/battle/img/act.png" id="actb"></div>
+                        <div class="button" id="item"><img src="assets/battle/img/items.png" id="itemb"></div>
+                        <div class="button" id="mercy"><img src="assets/battle/img/mercy.png" id="mercyb"></div>
+
+                    </div>
+            </div>
+            </div>
+
+        </section>
+
+
+        <script src="assets/engine.js"></script>
+    </body>
+</html>
