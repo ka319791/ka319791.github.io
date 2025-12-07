@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen, #war, #dmgt{
+    display: none;
+}
+
+#Act-Options .row, #Items .row {
+    display: none;
+}
+
+#textbox {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    font-size: 24px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+#battle {
+    display: flex;
+    height: 100vh;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    margin: 0 auto;
+}
+
+.enemy-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1; 
+    min-height: 0;
+}
+
+#costiil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#static {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.stats-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+}
+
+.health-bar {
+    background-color: red;
+    height: 30px;
+    width: 330px;
+}
+
+#bar {
+    background-color: yellow;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: rgb(222,111,39);
+    border: solid 3.5px rgb(222,111,39);
+    text-align: center;
+    padding: 10px;
+}
+
+#Items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#Act-Options {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.TextBox-Turn {
+    width: 100%;
+    height: 220px;
+    border: solid white 6px;
+    position: relative !important;
+    background: transparent;
+}
+  
+@keyframes expandFightBar {
+    0% {
+        width: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    100% {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+#Fight-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 100%;
+    
+    background-image: url("img/shit.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: none;
+}
+
+@keyframes lineMovement {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+#scroll-thing {
+    border: solid black 1px;
+    background-color: white;
+    width: 10px;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.health {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button img {
+    display: block !important;
+    vertical-align: top !important;
+    line-height: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.buttons {
+    width: 100% !important;
+}
+
+.button-row {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.text-health {
+    font-size: 30px;
+}
+
+.stats {
+    width: 100% !important;
+}
+
+.stats-row {
+    width: 100% !important;
+    padding: 10px 0 !important;
+}
+
+#Act-Options .text, #Items .text {
+    font-size: 28px !important; 
+    line-height: 1.4 !important;
+    padding: 10px 0 !important;
+}
+
+#scroll-thing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 10;
+}
+
+#Fight-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/shit.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    display: none;
+}
+
+.enemy-sprite {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-dmg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+#war {
+    width: 100%;
+    height: 300px;
+    border: solid white 6px;
+    position: relative !important;
+    background: transparent;
+}
+
+.HeartShaped {
+    width: 20px;
+    height: 20px;
+    background-image: url(img/soul.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition: transform 0.05s linear;
+}
+
+.bullet {
+    position: absolute;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.bullet[data-type="bone"] {
+    width: 30px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #888;
+    border-radius: 2px;
+}
+
+.bullet[data-type="blue"] {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+#bullet-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.bullet {
+    animation: pulse 0.5s infinite alternate;
+}
+
+.bullet[data-type="bone_vortex"] {
+    animation: pulse 0.3s infinite alternate, rotate 2s linear infinite;
+}
+
+.bullet[data-type="bone_spiral"] {
+    animation: pulse 0.4s infinite alternate;
+}
+
+@keyframes hitFlash {
+    0% { background-color: rgba(255, 0, 0, 0.7); }
+    100% { background-color: rgba(255, 0, 0, 0); }
+}
+
+.HeartShaped.hit {
+    animation: hitFlash 0.3s ease-out;
+}
+
+@keyframes bulletDestroy {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.bullet.destroying {
+    animation: bulletDestroy 0.2s forwards;
+}
